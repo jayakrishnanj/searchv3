@@ -1,2 +1,10 @@
 project:
   machine_name: searchv3
+  prefix: SD
+local:  
+  protocol: http  
+  hostname: ${project.machine_name}.lndo.site
+git:
+  default_branch: searchv3
+  remotes:
+    - 'eejayabal@svn-29892.prod.hosting.acquia.com:eejayabal.git'
