@@ -12,10 +12,6 @@ services:
       - apt-get install libxss1
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
       - curl -sL https://deb.nodesource.com/setup_14.x | bash -
-      - apt install -y nodejs
-      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - apt install -y ./google-chrome-stable_current_amd64.deb
-      - rm google-chrome-stable_current_amd64.deb
     overrides:
       # Pass SSH keys.
       volumes:
@@ -25,10 +21,16 @@ services:
           source: "${LANDO_SSH_AUTH_SOCK:-/run/host-services/ssh-auth.sock}"
           target: /run/host-services/ssh-auth.sock
       environment:
-        DRUSH_OPTIONS_URI: "https://local.searchv3.com/"
+        DRUSH_OPTIONS_URI: "https://searchv3.lndo.site/"
         SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
       cap_add:
         - SYS_ADMIN
+  search:
+    type: solr:7.7
+    portforward: true
+    core: drupal9
+    config:
+      dir: docroot/modules/contrib/search_api_solr/jump-start/solr7/config-set
 tooling:
   blt:
     service: appserver

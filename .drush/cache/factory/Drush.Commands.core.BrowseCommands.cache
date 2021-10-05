@@ -1,0 +1,68 @@
+{
+    "cid": "Drush\\Commands\\core\\BrowseCommands",
+    "data": {
+        "browse": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\BrowseCommands",
+            "method_name": "browse",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "browse",
+            "description": "Display a link to a given path or open link in a browser.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "browse",
+                "handle-remote-commands": "true"
+            },
+            "example_usages": {
+                "drush browse": "Open default web browser (if configured or detected) to the site front page.",
+                "drush browse node\/1": "Open web browser to the path node\/1.",
+                "drush @example.prod browse": "Open a browser to the web site specified in a site alias."
+            },
+            "return_type": null,
+            "arguments": {
+                "path": {
+                    "description": "Path to open. If omitted, the site front page will be opened.",
+                    "default": ""
+                }
+            },
+            "options": {
+                "browser": {
+                    "description": "Open the URL in the default browser. Use --no-browser to avoid opening a browser.",
+                    "default": true
+                },
+                "redirect-port": {
+                    "description": "The port that the web server is redirected to (e.g. when running within a Vagrant environment).",
+                    "default": 2
+                }
+            }
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579118,
+    "expire": 0
+}

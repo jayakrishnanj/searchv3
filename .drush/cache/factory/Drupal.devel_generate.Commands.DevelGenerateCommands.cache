@@ -1,0 +1,381 @@
+{
+    "cid": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+    "data": {
+        "getManager": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "getManager",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "setManager": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "setManager",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "getPluginInstance": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "getPluginInstance",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "setPluginInstance": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "setPluginInstance",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "getParameters": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "getParameters",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "setParameters": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "setParameters",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "users": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "users",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:users",
+            "description": "Create users.",
+            "help": "",
+            "aliases": [
+                "genu",
+                "devel-generate-users"
+            ],
+            "annotations": {
+                "command": "devel-generate:users",
+                "pluginId": "user"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "num": {
+                    "description": "Number of users to generate.",
+                    "default": 50
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete all users before generating new ones.",
+                    "default": false
+                },
+                "roles": {
+                    "description": "A comma delimited list of role IDs for new users. Don't specify 'authenticated'.",
+                    "default": ""
+                },
+                "pass": {
+                    "description": "Specify a password to be set for all generated users."
+                }
+            }
+        },
+        "terms": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "terms",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:terms",
+            "description": "Create terms in specified vocabulary.",
+            "help": "",
+            "aliases": [
+                "gent",
+                "devel-generate-terms"
+            ],
+            "annotations": {
+                "command": "devel-generate:terms",
+                "pluginId": "term"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "num": {
+                    "description": "Number of terms to generate.",
+                    "default": 50
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete all terms in these vocabularies before generating new ones.",
+                    "default": false
+                },
+                "bundles": {
+                    "description": "A comma-delimited list of machine names for the vocabularies where terms will be created."
+                },
+                "feedback": {
+                    "description": "An integer representing interval for insertion rate logging.",
+                    "default": "1000"
+                },
+                "languages": {
+                    "description": "A comma-separated list of language codes"
+                },
+                "translations": {
+                    "description": "A comma-separated list of language codes for translations."
+                },
+                "min-depth": {
+                    "description": "The minimum depth of hierarchy for the new terms.",
+                    "default": "1"
+                },
+                "max-depth": {
+                    "description": "The maximum depth of hierarchy for the new terms.",
+                    "default": "4"
+                }
+            }
+        },
+        "vocabs": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "vocabs",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:vocabs",
+            "description": "Create vocabularies.",
+            "help": "",
+            "aliases": [
+                "genv",
+                "devel-generate-vocabs"
+            ],
+            "annotations": {
+                "command": "devel-generate:vocabs",
+                "pluginId": "vocabulary",
+                "validate-module-enabled": "taxonomy"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "num": {
+                    "description": "Number of vocabularies to generate.",
+                    "default": 1
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete all vocabs before generating new ones.",
+                    "default": false
+                }
+            }
+        },
+        "menus": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "menus",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:menus",
+            "description": "Create menus.",
+            "help": "",
+            "aliases": [
+                "genm",
+                "devel-generate-menus"
+            ],
+            "annotations": {
+                "command": "devel-generate:menus",
+                "pluginId": "menu",
+                "validate-module-enabled": "menu_link_content"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "number_menus": {
+                    "description": "Number of menus to generate.",
+                    "default": 2
+                },
+                "number_links": {
+                    "description": "Number of links to generate.",
+                    "default": 50
+                },
+                "max_depth": {
+                    "description": "Max link depth.",
+                    "default": 3
+                },
+                "max_width": {
+                    "description": "Max width of first level of links.",
+                    "default": 8
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete any menus and menu links previously created by devel_generate before generating new ones.",
+                    "default": false
+                }
+            }
+        },
+        "content": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "content",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:content",
+            "description": "Create content.",
+            "help": "",
+            "aliases": [
+                "genc",
+                "devel-generate-content"
+            ],
+            "annotations": {
+                "command": "devel-generate:content",
+                "pluginId": "content",
+                "validate-module-enabled": "node"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "num": {
+                    "description": "Number of nodes to generate.",
+                    "default": 50
+                },
+                "max_comments": {
+                    "description": "Maximum number of comments to generate.",
+                    "default": 0
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete all content before generating new content.",
+                    "default": false
+                },
+                "bundles": {
+                    "description": "A comma-delimited list of content types to create.",
+                    "default": "page,article"
+                },
+                "authors": {
+                    "description": "A comma delimited list of authors ids. Defaults to all users."
+                },
+                "feedback": {
+                    "description": "An integer representing interval for insertion rate logging.",
+                    "default": 1000
+                },
+                "languages": {
+                    "description": "A comma-separated list of language codes"
+                },
+                "translations": {
+                    "description": "A comma-separated list of language codes for translations."
+                },
+                "add-type-label": {
+                    "description": "Add the content type label to the front of the node title",
+                    "default": false
+                },
+                "skip-fields": {
+                    "description": "A comma delimited list of fields to omit when generating random values"
+                }
+            }
+        },
+        "media": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "media",
+            "mtime": 1609375378,
+            "injected_classes": [],
+            "name": "devel-generate:media",
+            "description": "Create media items.",
+            "help": "",
+            "aliases": [
+                "genmd",
+                "devel-generate-media"
+            ],
+            "annotations": {
+                "command": "devel-generate:media",
+                "pluginId": "media",
+                "validate-module-enabled": "media"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "num": {
+                    "description": "Number of media items to generate.",
+                    "default": 50
+                }
+            },
+            "options": {
+                "kill": {
+                    "description": "Delete all media items before generating new media.",
+                    "default": false
+                },
+                "media-types": {
+                    "description": "A comma-delimited list of media types to create."
+                },
+                "feedback": {
+                    "description": "An integer representing interval for insertion rate logging.",
+                    "default": 1000
+                },
+                "skip-fields": {
+                    "description": "A comma delimited list of fields to omit when generating random values."
+                },
+                "languages": {
+                    "description": "A comma-separated list of language codes"
+                }
+            }
+        },
+        "validate": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "validate",
+            "mtime": 1609375378,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "validate",
+            "description": "The standard drush validate hook.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "validate"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": "The data sent from the drush command."
+                }
+            },
+            "options": []
+        },
+        "generate": {
+            "schema": 4,
+            "class": "Drupal\\devel_generate\\Commands\\DevelGenerateCommands",
+            "method_name": "generate",
+            "mtime": 1609375378,
+            "injected_classes": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632744871,
+    "expire": 0
+}

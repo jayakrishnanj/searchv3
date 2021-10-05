@@ -1,6 +1,8 @@
 project:
   machine_name: searchv3
   prefix: SD
+  profile:
+    name: standard
 local:  
   protocol: http  
   hostname: ${project.machine_name}.lndo.site

@@ -1,0 +1,60 @@
+{
+    "cid": "Drush\\Commands\\core\\DeployCommands",
+    "data": {
+        "deploy": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\DeployCommands",
+            "method_name": "deploy",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "deploy",
+            "description": "Run several commands after performing a code deployment.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "deploy",
+                "topics": "docs:deploy",
+                "throws": "\\Exception"
+            },
+            "example_usages": {
+                "drush deploy -v -y": "Run updates with verbose logging and accept all prompts."
+            },
+            "return_type": null,
+            "arguments": [],
+            "options": []
+        },
+        "cacheRebuild": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\DeployCommands",
+            "method_name": "cacheRebuild",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579118,
+    "expire": 0
+}

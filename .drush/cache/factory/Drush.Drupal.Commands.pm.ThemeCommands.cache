@@ -1,0 +1,90 @@
+{
+    "cid": "Drush\\Drupal\\Commands\\pm\\ThemeCommands",
+    "data": {
+        "getThemeInstaller": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\pm\\ThemeCommands",
+            "method_name": "getThemeInstaller",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "enable": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\pm\\ThemeCommands",
+            "method_name": "enable",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "theme:enable",
+            "description": "Enable one or more themes.",
+            "help": "",
+            "aliases": [
+                "then",
+                "theme-enable"
+            ],
+            "annotations": {
+                "command": "theme:enable"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "themes": {
+                    "description": "A comma delimited list of themes.",
+                    "default": []
+                }
+            },
+            "options": []
+        },
+        "uninstall": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\pm\\ThemeCommands",
+            "method_name": "uninstall",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "theme:uninstall",
+            "description": "Uninstall theme.",
+            "help": "",
+            "aliases": [
+                "thun",
+                "theme-uninstall"
+            ],
+            "annotations": {
+                "command": "theme:uninstall"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "themes": {
+                    "description": "A comma delimited list of themes.",
+                    "default": []
+                }
+            },
+            "options": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632586971,
+    "expire": 0
+}

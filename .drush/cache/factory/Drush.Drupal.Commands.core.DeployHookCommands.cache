@@ -1,0 +1,116 @@
+{
+    "cid": "Drush\\Drupal\\Commands\\core\\DeployHookCommands",
+    "data": {
+        "status": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\core\\DeployHookCommands",
+            "method_name": "status",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "deploy:hook-status",
+            "description": "Prints information about pending deploy update hooks.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "field-labels": "\n   module: Module\n   hook: Hook\n   description: Description",
+                "default-fields": "module,hook,description",
+                "command": "deploy:hook-status",
+                "filter-default-field": "hook",
+                "filter-output": true,
+                "topics": [
+                    "docs:deploy",
+                    "docs:output-formats-filters"
+                ]
+            },
+            "example_usages": {
+                "deploy:hook-status": "Prints information about pending deploy hooks."
+            },
+            "return_type": "\\Consolidation\\OutputFormatters\\StructuredData\\RowsOfFields",
+            "arguments": [],
+            "options": []
+        },
+        "run": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\core\\DeployHookCommands",
+            "method_name": "run",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "deploy:hook",
+            "description": "Run pending deploy update hooks.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "deploy:hook",
+                "topics": "docs:deploy"
+            },
+            "example_usages": {
+                "deploy:hook": "Run pending deploy hooks."
+            },
+            "return_type": null,
+            "arguments": [],
+            "options": []
+        },
+        "process": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\core\\DeployHookCommands",
+            "method_name": "process",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "deploy:batch-process",
+            "description": "Process operations in the specified batch set.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "deploy:batch-process",
+                "bootstrap": "full",
+                "hidden": ""
+            },
+            "example_usages": [],
+            "return_type": "\\Consolidation\\OutputFormatters\\StructuredData\\UnstructuredListData",
+            "arguments": {
+                "batch_id": {
+                    "description": "The batch id that will be processed."
+                }
+            },
+            "options": {
+                "format": {
+                    "description": "",
+                    "default": "json"
+                }
+            }
+        },
+        "updateFinished": {
+            "schema": 4,
+            "class": "Drush\\Drupal\\Commands\\core\\DeployHookCommands",
+            "method_name": "updateFinished",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632586971,
+    "expire": 0
+}

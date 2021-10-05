@@ -1,0 +1,74 @@
+{
+    "cid": "Drush\\Commands\\core\\SshCommands",
+    "data": {
+        "ssh": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\SshCommands",
+            "method_name": "ssh",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "site:ssh",
+            "description": "Connect to a Drupal site's server via SSH, and optionally run a shell command.",
+            "help": "",
+            "aliases": [
+                "ssh",
+                "site-ssh"
+            ],
+            "annotations": {
+                "command": "site:ssh",
+                "optionset_proc_build": "",
+                "handle-remote-commands": "",
+                "topics": "docs:aliases"
+            },
+            "example_usages": {
+                "drush @mysite ssh": "Open an interactive shell on @mysite's server.",
+                "drush @prod ssh ls \/tmp": "Run \u003cinfo\u003els \/tmp\u003c\/info\u003e on \u003cinfo\u003e@prod\u003c\/info\u003e site.",
+                "drush @prod ssh git pull": "Run \u003cinfo\u003egit pull\u003c\/info\u003e on the Drupal root directory on the \u003cinfo\u003e@prod\u003c\/info\u003e site.",
+                "drush ssh git pull": "Run \u003cinfo\u003egit pull\u003c\/info\u003e on the local Drupal root directory."
+            },
+            "return_type": null,
+            "arguments": {
+                "code": {
+                    "description": "Code which should run at remote host.",
+                    "default": []
+                }
+            },
+            "options": {
+                "cd": {
+                    "description": "Directory to change to. Defaults to Drupal root.",
+                    "default": 2
+                },
+                "tty": {
+                    "description": "",
+                    "default": false
+                }
+            }
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579118,
+    "expire": 0
+}

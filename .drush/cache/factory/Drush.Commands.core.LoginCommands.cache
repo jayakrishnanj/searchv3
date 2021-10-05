@@ -1,0 +1,82 @@
+{
+    "cid": "Drush\\Commands\\core\\LoginCommands",
+    "data": {
+        "login": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\LoginCommands",
+            "method_name": "login",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "user:login",
+            "description": "Display a one time login link for user ID 1, or another user.",
+            "help": "",
+            "aliases": [
+                "uli",
+                "user-login"
+            ],
+            "annotations": {
+                "command": "user:login",
+                "bootstrap": "none",
+                "handle-remote-commands": ""
+            },
+            "example_usages": {
+                "drush user:login": "Open browser to homepage, logged in as uid=1.",
+                "drush user:login --name=ryan node\/add\/blog": "Open browser (if configured or detected) for a one-time login link for username ryan that redirects to node\/add\/blog.",
+                "drush user:login --uid=123": "Open browser and login as user with uid \"123\".",
+                "drush user:login --mail=foo@bar.com": "Open browser and login as user with mail \"foo@bar.com\"."
+            },
+            "return_type": null,
+            "arguments": {
+                "path": {
+                    "description": "Optional path to redirect to after logging in.",
+                    "default": ""
+                }
+            },
+            "options": {
+                "name": {
+                    "description": "A user name to log in as."
+                },
+                "uid": {
+                    "description": "A uid to log in as."
+                },
+                "mail": {
+                    "description": "A user mail address to log in as."
+                },
+                "browser": {
+                    "description": "Open the URL in the default browser. Use --no-browser to avoid opening a browser.",
+                    "default": true
+                },
+                "redirect-port": {
+                    "description": "A custom port for redirecting to (e.g., when running within a Vagrant environment)",
+                    "default": 2
+                }
+            }
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579118,
+    "expire": 0
+}

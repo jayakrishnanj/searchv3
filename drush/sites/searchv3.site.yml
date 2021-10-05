@@ -1,0 +1,6 @@
+local:
+    root: /var/www/searchv3/docroot
+    uri: 'http://searchv3.lndo.site'
+    host: searchv3.lndo.site
+    user: vagrant
+    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }

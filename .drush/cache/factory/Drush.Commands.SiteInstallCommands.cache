@@ -1,0 +1,53 @@
+{
+    "cid": "Drush\\Commands\\SiteInstallCommands",
+    "data": {
+        "siteInstallPostCommand": {
+            "schema": 4,
+            "class": "Drush\\Commands\\SiteInstallCommands",
+            "method_name": "siteInstallPostCommand",
+            "mtime": 1632198117,
+            "injected_classes": [],
+            "name": "site:install-post-command",
+            "description": "Execute site studio rebuild after Acquia CMS site install.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "post-command site-install"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "result": {
+                    "description": ""
+                }
+            },
+            "options": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579119,
+    "expire": 0
+}

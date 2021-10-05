@@ -1,0 +1,217 @@
+{
+    "cid": "Drush\\Commands\\core\\UpdateDBCommands",
+    "data": {
+        "updatedb": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updatedb",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "updatedb",
+            "description": "Apply any database updates required (as with running update.php).",
+            "help": "",
+            "aliases": [
+                "updb"
+            ],
+            "annotations": {
+                "command": "updatedb",
+                "bootstrap": "full",
+                "topics": "docs:deploy",
+                "kernel": "update"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": [],
+            "options": {
+                "cache-clear": {
+                    "description": "Clear caches upon completion.",
+                    "default": true
+                },
+                "entity-updates": {
+                    "description": "Run automatic entity schema updates at the end of any update hooks. Not supported in Drupal \u003e= 8.7.0.",
+                    "default": false
+                },
+                "post-updates": {
+                    "description": "Run post updates after hook_update_n and entity updates.",
+                    "default": true
+                }
+            }
+        },
+        "entityUpdates": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "entityUpdates",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "entity:updates",
+            "description": "Apply pending entity schema updates.",
+            "help": "",
+            "aliases": [
+                "entup",
+                "entity-updates"
+            ],
+            "annotations": {
+                "command": "entity:updates",
+                "bootstrap": "full",
+                "kernel": "update"
+            },
+            "example_usages": {
+                "drush updatedb:status --entity-updates | grep entity-update": "Use updatedb:status to detect pending updates."
+            },
+            "return_type": null,
+            "arguments": [],
+            "options": {
+                "cache-clear": {
+                    "description": "Set to 0 to suppress normal cache clearing; the caller should then clear if needed.",
+                    "default": true
+                }
+            }
+        },
+        "updatedbStatus": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updatedbStatus",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "updatedb:status",
+            "description": "List any pending database updates.",
+            "help": "",
+            "aliases": [
+                "updbst",
+                "updatedb-status"
+            ],
+            "annotations": {
+                "command": "updatedb:status",
+                "bootstrap": "full",
+                "kernel": "update",
+                "field-labels": "\n   module: Module\n   update_id: Update ID\n   description: Description\n   type: Type",
+                "default-fields": "module,update_id,type,description",
+                "filter-default-field": "type",
+                "filter-output": true,
+                "topics": "docs:output-formats-filters"
+            },
+            "example_usages": [],
+            "return_type": "\\Consolidation\\OutputFormatters\\StructuredData\\RowsOfFields",
+            "arguments": [],
+            "options": {
+                "format": {
+                    "description": "",
+                    "default": "table"
+                },
+                "entity-updates": {
+                    "description": "Show entity schema updates.",
+                    "default": true
+                },
+                "post-updates": {
+                    "description": "Show post updates.",
+                    "default": true
+                }
+            }
+        },
+        "process": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "process",
+            "mtime": 1628851240,
+            "injected_classes": [],
+            "name": "updatedb:batch-process",
+            "description": "Process operations in the specified batch set.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "updatedb:batch-process",
+                "bootstrap": "full",
+                "kernel": "update",
+                "hidden": ""
+            },
+            "example_usages": [],
+            "return_type": "\\Consolidation\\OutputFormatters\\StructuredData\\UnstructuredListData",
+            "arguments": {
+                "batch_id": {
+                    "description": "The batch id that will be processed."
+                }
+            },
+            "options": {
+                "format": {
+                    "description": "",
+                    "default": "json"
+                }
+            }
+        },
+        "updateFinished": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updateFinished",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "updateBatch": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updateBatch",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "updateEntityDefinitions": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updateEntityDefinitions",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "getUpdateList": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "getUpdateList",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "getUpdatedbStatus": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "getUpdatedbStatus",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "entityUpdatesMain": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "entityUpdatesMain",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "updateCheckRequirements": {
+            "schema": 4,
+            "class": "Drush\\Commands\\core\\UpdateDBCommands",
+            "method_name": "updateCheckRequirements",
+            "mtime": 1628851240,
+            "injected_classes": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632579119,
+    "expire": 0
+}

@@ -1,0 +1,195 @@
+{
+    "cid": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+    "data": {
+        "setLogger": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "setLogger",
+            "mtime": 1628869900,
+            "injected_classes": []
+        },
+        "reinstallFieldtypes": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "reinstallFieldtypes",
+            "mtime": 1628869900,
+            "injected_classes": [],
+            "name": "search-api-solr:reinstall-fieldtypes",
+            "description": "Re-install Solr Field Types from their yml files.",
+            "help": "",
+            "aliases": [
+                "solr-reinstall-ft",
+                "sasm-reinstall-ft",
+                "search-api-solr-delete-and-reinstall-all-field-types",
+                "search-api-solr-multilingual-delete-and-reinstall-all-field-types"
+            ],
+            "annotations": {
+                "command": "search-api-solr:reinstall-fieldtypes"
+            },
+            "example_usages": {
+                "drush search-api-solr:reinstall-fieldtypes": "Deletes all Solr Field Type and re-installs them from their yml files."
+            },
+            "return_type": null,
+            "arguments": [],
+            "options": []
+        },
+        "installMissingFieldtypes": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "installMissingFieldtypes",
+            "mtime": 1628869900,
+            "injected_classes": [],
+            "name": "search-api-solr:install-missing-fieldtypes",
+            "description": "Install missing Solr Field Types from their yml files.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "command": "search-api-solr:install-missing-fieldtypes"
+            },
+            "example_usages": {
+                "drush search-api-solr:install-missing-fieldtypes": "Install missing Solr Field Types."
+            },
+            "return_type": null,
+            "arguments": [],
+            "options": []
+        },
+        "getServerConfig": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "getServerConfig",
+            "mtime": 1628869900,
+            "injected_classes": [],
+            "name": "search-api-solr:get-server-config",
+            "description": "Gets the config for a Solr search server.",
+            "help": "",
+            "aliases": [
+                "solr-gsc",
+                "sasm-gsc",
+                "search-api-solr-get-server-config",
+                "search-api-solr-multilingual-get-server-config"
+            ],
+            "annotations": {
+                "throws": [
+                    "\\Drupal\\search_api\\ConsoleException",
+                    "\\Drupal\\search_api\\SearchApiException",
+                    "\\ZipStream\\Exception\\FileNotFoundException",
+                    "\\ZipStream\\Exception\\FileNotReadableException",
+                    "\\ZipStream\\Exception\\OverflowException"
+                ],
+                "command": "search-api-solr:get-server-config"
+            },
+            "example_usages": {
+                "drush search-api-solr:get-server-config server_id file_name": "Get the config files for a solr server and save it as zip file."
+            },
+            "return_type": null,
+            "arguments": {
+                "server_id": {
+                    "description": "The ID of the server."
+                },
+                "file_name": {
+                    "description": "The file name of the config zip that should be created.",
+                    "default": null
+                },
+                "solr_version": {
+                    "description": "The targeted Solr version.",
+                    "default": null
+                }
+            },
+            "options": []
+        },
+        "finalizeIndex": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "finalizeIndex",
+            "mtime": 1628869900,
+            "injected_classes": [],
+            "name": "search-api-solr:finalize-index",
+            "description": "Indexes items for one or all enabled search indexes.",
+            "help": "",
+            "aliases": [
+                "solr-finalize"
+            ],
+            "annotations": {
+                "command": "search-api-solr:finalize-index",
+                "throws": "\\Exception\n   If a batch process could not be created."
+            },
+            "example_usages": {
+                "drush search-api-solr:finalize-index": "Finalize all enabled indexes.",
+                "drush search-api-solr:finalize-index node_index": "Finalize the index with the ID node_index.",
+                "drush search-api-solr:finalize-index node_index --force": "Index a maximum number of 100 items for the index with the ID node_index."
+            },
+            "return_type": null,
+            "arguments": {
+                "indexId": {
+                    "description": "(optional) A search index ID, or NULL to index items for all enabled indexes.",
+                    "default": null
+                }
+            },
+            "options": {
+                "force": {
+                    "description": "Start the finalization even if the internal tracker indicates that no finalization is required.",
+                    "default": false
+                }
+            }
+        },
+        "executeRawStreamingExpression": {
+            "schema": 4,
+            "class": "Drupal\\search_api_solr\\Commands\\SearchApiSolrCommands",
+            "method_name": "executeRawStreamingExpression",
+            "mtime": 1628869900,
+            "injected_classes": [],
+            "name": "search-api-solr:execute-raw-streaming-expression",
+            "description": "Executes a streaming expression from STDIN.",
+            "help": "",
+            "aliases": [
+                "solr-erse"
+            ],
+            "annotations": {
+                "command": "search-api-solr:execute-raw-streaming-expression",
+                "throws": [
+                    "\\Drupal\\search_api_solr\\SearchApiSolrException",
+                    "\\Drupal\\search_api\\SearchApiException"
+                ]
+            },
+            "example_usages": {
+                "drush search-api-solr:execute-streaming-expression node_index - \u003c streaming_expression.txt": "Execute the raw streaming expression in streaming_expression.txt"
+            },
+            "return_type": "Drupal\\search_api_solr\\Commands\\string",
+            "arguments": {
+                "indexId": {
+                    "description": "A search index ID."
+                },
+                "expression": {
+                    "description": "The streaming expression. Use '-' to read from STDIN."
+                }
+            },
+            "options": []
+        },
+        "preHook": {
+            "schema": 4,
+            "class": "Drush\\Commands\\DrushCommands",
+            "method_name": "preHook",
+            "mtime": 1628851240,
+            "injected_classes": [
+                "Consolidation\\AnnotatedCommand\\CommandData"
+            ],
+            "name": "pre:hook",
+            "description": "Persist commandData for use in primary command callback. Used by 'topic' commands.",
+            "help": "",
+            "aliases": [],
+            "annotations": {
+                "hook": "pre-command *"
+            },
+            "example_usages": [],
+            "return_type": null,
+            "arguments": {
+                "commandData": {
+                    "description": ""
+                }
+            },
+            "options": []
+        }
+    },
+    "created": 1632746838,
+    "expire": 0
+}
