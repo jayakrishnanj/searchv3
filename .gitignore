@@ -14,6 +14,14 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 
+
+.composer
+.config
+.drush
+.ssh
+.vagrant
+.phpcs-cache
+
 # Files and directories for common development environments, loosely inherited from BLT Project
 # @see https://github.com/acquia/blt-project/blob/11.x/.gitignore
 
